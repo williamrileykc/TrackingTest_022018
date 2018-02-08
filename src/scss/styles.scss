@@ -85,6 +85,7 @@ p {
 .frame-container {
 	overflow: hidden;
 	max-width: 100%;
+	position: relative;
 	text-align: center;
 	@include screen(md) {
 		max-width: 1000px;

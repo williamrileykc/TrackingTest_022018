@@ -286,6 +286,8 @@ p
 
 .frame-container
 {
+    position: relative;
+
     overflow: hidden;
 
     max-width: 100%;

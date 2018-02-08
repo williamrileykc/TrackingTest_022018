@@ -1027,11 +1027,12 @@
 			main.removeListeners();
 			main.addListeners();
 		},
-		frameSwap: function() {
+		frameSwap: function(e) {
 			var el = $(this),
 				target = $(this).parent('.buttons').data('target');
 			$('.frame').removeClass('active');
 			$('#'+target).addClass('active');
+			e.preventDefault();
 		}
 	};
 
