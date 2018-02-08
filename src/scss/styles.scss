@@ -1,0 +1,117 @@
+@import "../../node_modules/normalize-scss/sass/_normalize.scss";
+@import "base/reset";
+@import "base/variables";
+@import "base/grid";
+@import "base/mixins";
+
+// VARIABLES //
+$blue: #00F;
+$red: #ff0000;
+$orange: #ffa500;
+$grey-dark: #444444;
+$grey-light: #bbbbbb;
+$white: #fff;
+$black: #000;
+
+// TYPOGRAPHY//
+body {
+	font-family: arial;
+	font-size: 14px;
+}
+h1 {
+	@include gutter('bottom');
+	font-size: 2em;
+}
+h2 {
+	@include gutter('bottom');
+	font-size: 1.5em;
+}
+p {
+	@include gutter('bottom');
+	font-size: 1em;
+	a {
+
+	}
+}
+
+
+// BUTTONS //
+.button {
+	color: $grey-dark;
+	display: inline-block;
+	text-align: center;
+	height: 30px;
+	width: auto;
+	margin: 10px 15px 20px 15px;
+	padding: 0 20px;
+	border: 1px solid $grey-light;
+	border-radius: 10px;
+	line-height: 30px;
+	text-decoration: none;
+}
+.button-a {
+	@extend .button;
+	color: $white;
+	#frame__blue & {
+		background-color: $blue;
+	}
+	#frame__red & {
+		background-color: $red;
+	}
+	#frame__orange & {
+		background-color: $orange;
+	}	
+}
+.button-b {
+	@extend .button;
+	#frame__blue & {
+		color: $blue;
+	}	
+	#frame__red & {
+		color: $red;
+	}
+	#frame__orange & {
+		color: $orange;
+	}	
+}
+.button-c {
+	@extend .button;
+	background-color: $grey-dark;
+	color: $white;
+}
+
+// MARKUP //
+
+.frame-container {
+	overflow: hidden;
+	max-width: 100%;
+	text-align: center;
+	@include screen(md) {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+}
+
+.frame {
+	@include gutter('top');
+	margin-left: -200%;
+	position: absolute;
+	transition: all 1s ease-in-out;
+	width: 100%;
+	&.active {
+		margin-left: 0;
+		position: relative;
+		transition: all 1s ease-in-out;
+	}
+}
+
+
+.buttons {
+	> a {
+		display: block;
+	}
+	@include screen(md) {
+		display: flex;
+		justify-content: center;
+	}
+}
