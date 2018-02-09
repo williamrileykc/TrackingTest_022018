@@ -23,12 +23,6 @@
 			$('.frame').removeClass('active');
 			$('#'+target).addClass('active');
 			e.preventDefault();
-		},
-		handleOutboundLinkClicks: function(event) {
-			alert('test');
-			gtag('event', 'click', {
-				'event_category': 'BuyNow'
-			});
 		}
 	};
 
