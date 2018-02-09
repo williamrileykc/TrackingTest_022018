@@ -26,10 +26,8 @@
 		},
 		handleOutboundLinkClicks: function(event) {
 			alert('test');
-			ga('send', 'event', {
-				eventCategory: 'Outbound Link',
-				eventAction: 'click',
-				eventLabel: 'label'
+			gtag('event', 'click', {
+				'event_category': 'BuyNow'
 			});
 		}
 	};
