@@ -1,7 +1,5 @@
 (function($) {
-
 	var main = {
-
 		initialize: function () {
 			main.refreshListeners();
 		},
@@ -25,6 +23,5 @@
 			e.preventDefault();
 		}
 	};
-
 	$(document).ready(main.initialize);
 }(jQuery));

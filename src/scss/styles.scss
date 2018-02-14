@@ -28,9 +28,20 @@ h2 {
 }
 p {
 	@include gutter('bottom');
-	font-size: 1em;
+	font-size: 1.2em;
+	padding: 0 15px;
 	a {
-
+		color: $grey-dark;
+		text-decoration: underline;
+	}
+	&.quote {
+		color: $grey-light;
+		font-style: italic;
+		text-align: center;
+		margin: 0 auto;
+		@include screen(md){
+			width: 40%;
+		}
 	}
 }
 
@@ -108,6 +119,7 @@ p {
 
 
 .buttons {
+	@include gutter('bottom', 2);
 	> a {
 		display: block;
 	}
